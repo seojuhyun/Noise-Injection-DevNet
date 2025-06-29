@@ -1,3 +1,6 @@
+Based on GuansongPang/deviation-network (GPL‑3.0).
+Modified by Juhyun Seo to add noise as [설명].
+
 ## Noise-Injection-DevNet
 A TensorFlow-based implementation of DevNet with noise-injected anomaly detection for highly imbalanced datasets.  
 This project is part of a research submission to **The Korean Institute of Broadcast and Media Engineers 2025 (KIBME 2025)**.
