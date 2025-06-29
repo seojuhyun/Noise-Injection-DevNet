@@ -7,7 +7,10 @@ Guansong Pang, Chunhua Shen, and Anton van den Hengel. 2019.
 Deep Anomaly Detection with Deviation Networks. 
 In The 25th ACM SIGKDDConference on Knowledge Discovery and Data Mining (KDD ’19),
 August4–8, 2019, Anchorage, AK, USA.ACM, New York, NY, USA, 10 pages. https://doi.org/10.1145/3292500.3330871
+
 """
+
+# Modified from GuansongPang/deviation-network (GPL‑3.0)
 
 import numpy as np
 np.random.seed(42)
