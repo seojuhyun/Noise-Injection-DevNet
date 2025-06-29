@@ -1,5 +1,6 @@
-Based on GuansongPang/deviation-network (GPL‑3.0).
+Based on GuansongPang/deviation-network (GPL‑3.0). n/
 Modified by Juhyun Seo to add noise as [설명].
+
 
 ## Noise-Injection-DevNet
 A TensorFlow-based implementation of DevNet with noise-injected anomaly detection for highly imbalanced datasets.  
@@ -23,5 +24,10 @@ matplotlib==3.8.2
 numpy==1.26.3 
 scikit-learn==1.5.0 
 pandas==2.2.0 
-tensorflow==2.11.0 
+tensorflow==2.11.0
+
+## License
+This project is licensed under the **GNU General Public License v3.0 (GPL-3.0)**,  
+based on the original work by [GuansongPang/deviation-network](https://github.com/GuansongPang/deviation-network).
+
 
