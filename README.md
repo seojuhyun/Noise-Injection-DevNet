@@ -25,6 +25,7 @@ numpy==1.26.3
 scikit-learn==1.5.0 
 pandas==2.2.0 
 tensorflow==2.11.0
+```
 
 ## License
 This project is licensed under the **GNU General Public License v3.0 (GPL-3.0)**,  
