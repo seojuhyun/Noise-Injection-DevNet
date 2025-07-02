@@ -14,7 +14,6 @@ Experimental results demonstrate improved robustness and precision in detecting 
 
 
 ## 📦 Installation
-[requirements.txt](https://github.com/user-attachments/files/20450055/requirements.txt)
 ```bash
 ipykernel==6.29.0 
 ipython==8.27.0 
