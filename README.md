@@ -1,5 +1,5 @@
-Based on GuansongPang/deviation-network (GPL‑3.0). n/
-Modified by Juhyun Seo to add noise as [설명].
+> Based on [GuansongPang/deviation-network](https://github.com/GuansongPang/deviation-network) (GPL‑3.0)  
+> Modified by Juhyun Seo to inject label-aware synthetic anomalies in order to preserve inter-sample deviation and mitigate data imbalance.
 
 
 ## Noise-Injection-DevNet
@@ -14,6 +14,7 @@ Experimental results demonstrate improved robustness and precision in detecting 
 
 
 ## 📦 Installation
+Install the dependencies below (via pip or requirements.txt):
 ```bash
 ipykernel==6.29.0 
 ipython==8.27.0 
