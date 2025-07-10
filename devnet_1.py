@@ -41,6 +41,26 @@ import time
 MAX_INT = np.iinfo(np.int32).max
 data_format = 0
 
+
+def dev_network_6d(input_shape):
+    '''
+    deeper network architecture with three hidden layers
+    '''
+    x_input = Input(shape=input_shape)
+    intermediate = Dense(1000, activation='relu',
+                kernel_regularizer=regularizers.l2(0.01), name = 'hl1')(x_input)
+    intermediate = Dense(512, activation='relu',
+                kernel_regularizer=regularizers.l2(0.01), name = 'hl2')(intermediate)
+    intermediate = Dense(128, activation='relu',
+                kernel_regularizer=regularizers.l2(0.01), name = 'hl3')(intermediate)
+    intermediate = Dense(64, activation='relu',
+                kernel_regularizer=regularizers.l2(0.01), name = 'hl4')(intermediate)
+    intermediate = Dense(32, activation='relu',
+                kernel_regularizer=regularizers.l2(0.01), name = 'hl5')(intermediate)
+    intermediate = Dense(1, activation='linear', name = 'score')(intermediate)
+    return Model(x_input, intermediate)
+
+
 def dev_network_d(input_shape):
     '''
     deeper network architecture with three hidden layers
@@ -92,7 +112,9 @@ def deviation_network(input_shape, network_depth):
     '''
     construct the deviation network-based detection model
     '''
-    if network_depth == 4:
+    if network_depth == 6:
+        model = dev_network_6d(input_shape)
+    elif network_depth == 4:
         model = dev_network_d(input_shape)
     elif network_depth == 2:
         model = dev_network_s(input_shape)
@@ -441,7 +463,7 @@ def run_devnet(args):
 
       
 parser = argparse.ArgumentParser()
-parser.add_argument("--network_depth", choices=['1','2', '4'], default='2', help="the depth of the network architecture")
+parser.add_argument("--network_depth", choices=['1','2', '4', '6'], default='2', help="the depth of the network architecture")
 parser.add_argument("--batch_size", type=int, default=512, help="batch size used in SGD")
 parser.add_argument("--nb_batch", type=int, default=20, help="the number of batches per epoch")
 parser.add_argument("--epochs", type=int, default=50, help="the number of epochs")
